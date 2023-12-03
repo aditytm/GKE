@@ -1,28 +1,28 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx
+  name: adityaert
   namespace: default
   labels:
-    app: nginx
+    app: adityaert
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: nginx
+      app: adityaert
   template:
     metadata:
       labels:
-        app: nginx
+        app: adityaert
     spec:
       containers:
-      - name: nginx
-        image: us-central1-docker.pkg.dev/GOOGLE_PROJECT/demo/nginx:latest
+      - name: adityaert
+        image: us-central1-docker.pkg.dev/GOOGLE_PROJECT/demo/adityaert:latest
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-service
+  name: adityaert-service
   namespace: default
 spec:
   type: LoadBalancer
